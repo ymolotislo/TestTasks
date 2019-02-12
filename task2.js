@@ -20,7 +20,7 @@ function calculateLettersSum(name) {
 	const letters = name.split('');
 
 	let lettersSum = 0;
-	for (letter of letters) {
+	for (let letter of letters) {
 		lettersSum += letter.charCodeAt(0) - 64;
 	}
 
