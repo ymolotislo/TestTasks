@@ -1,4 +1,5 @@
-/*Дан массив целых чисел <array> и целое число <k>. Нужно вывести все уникальные пары чисел из массива,
+/**
+ Дан массив целых чисел <array> и целое число <k>. Нужно вывести все уникальные пары чисел из массива,
  сумма которых равна k.
 
 
@@ -25,7 +26,7 @@ function searchPairs(array, N) {
 	//Исключаем повторяющиеся значения из исходного массива
 	array = array.filter((elem, i) => {
 		for (let j = i + 1; j < array.length; j++) {
-			if (elem == array[j]) return false;
+			if (elem === array[j]) return false;
 		}
 		return true;
 	});
@@ -41,7 +42,7 @@ function searchPairs(array, N) {
 		 элементами, так как сумма с предыдущими элементами уже проверялась на равенство N в предыдущих итерациях*/
 		for (let j = i + 1; j < array.length; j++) {
 			let sum = array[i] + array[j];
-			if (sum == N) result.push([array[i], array[j]]);
+			if (sum === N) result.push([array[i], array[j]]);
 		}
 	}
 	return result;
